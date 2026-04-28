@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/productos';
+const API_URL = 'https://programacion-web-a3m8.onrender.com/api/productos';
 
 let productos = [];
 let modoEdicion = false;
