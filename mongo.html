@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Productos - API REST</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gestión de Productos</h1>
+        <p class="subtitulo">CRUD completo con Node.js + Fetch API</p>
+        
+        <div id="mensaje" class="mensaje"></div>
+        
+        <div class="card formulario-card">
+            <h2 id="formTitulo">Nuevo Producto</h2>
+            <form id="productoForm">
+                <input type="hidden" id="productoId">
+                
+                <div class="campo">
+                    <label>Nombre del Producto:</label>
+                    <input type="text" id="nombre" required placeholder="Ej: Laptop Gamer">
+                </div>
+                
+                <div class="campo">
+                    <label>Precio:</label>
+                    <input type="number" id="precio" step="0.01" required placeholder="Ej: 15000">
+                </div>
+                
+                <div class="campo">
+                    <label>Descripción:</label>
+                    <textarea id="descripcion" rows="2" placeholder="Descripción opcional..."></textarea>
+                </div>
+                
+                <div class="botones-form">
+                    <button type="submit" id="btnGuardar" class="btn-guardar">Guardar</button>
+                    <button type="button" id="btnCancelar" class="btn-cancelar" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="card tabla-card">
+            <h2>Lista de Productos</h2>
+            <div class="tabla-container">
+                <table id="tablaProductos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                        <tr>
+                            <td colspan="5" class="cargando">Cargando productos...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+       <footer>
+        <p>© 2026 Mi Sitio Web</p>
+    </footer>
+    <a href="index.html" class="btn-regresar">
+        Regresar a la página principal
+    </a>
+        <script src="js/app.js"></script>
+</body>
+</html>
