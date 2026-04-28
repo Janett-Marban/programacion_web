@@ -1,0 +1,863 @@
+/* ===== VARIABLES DE COLOR ===== */
+:root {
+    /* COLORES PRINCIPALES COCA-COLA */
+    --color-rojo: #520505;
+    --color-rojo-oscuro: #631b1b;
+    --color-rojo-muy-oscuro: #8b2a2a;
+
+    /* FONDO / TEXTO CLARO */
+    --fondo-claro: #f4f4f4;
+    --texto-claro: #222;
+
+    /* FONDO / TEXTO OSCURO */
+    --fondo-oscuro: #121212;
+    --texto-oscuro: #e0e0e0;
+    --fondo-seccion-oscuro: #1f1f1f;
+
+    /* LINKS / BOTONES EN OSCURO */
+    --link-oscuro: #bb86fc;
+}
+
+/* ===== BASE GENERAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== FUENTES ELEGANTES ===== */
+body {
+    background: var(--fondo-claro);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.65;
+    color: var(--texto-claro);
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--color-rojo);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+header img {
+    float: left;
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+/* ===== BOTÓN DE MODO OSCURO ===== */
+header .boton-tema {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    background: var(--color-rojo-oscuro);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .boton-tema:hover {
+    background: #bb86fc;
+    transform: translateY(-1px);
+}
+
+/* ===== MODO OSCURO ===== */
+body.oscuro {
+    background: var(--fondo-oscuro);
+    color: var(--texto-oscuro);
+}
+
+/* Headers, nav, main, footer y todas las sections */
+body.oscuro header,
+body.oscuro nav,
+body.oscuro main,
+body.oscuro footer,
+body.oscuro section {
+    background: var(--fondo-seccion-oscuro);
+    color: var(--texto-oscuro);
+}
+
+/* HOVER DE SECCIONES CORREGIDO (no se ve rojo) */
+body.oscuro section:hover {
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    border: 1px solid var(--link-oscuro);
+}
+
+/* GRID "Pilares de la Empresa" */
+body.oscuro .grid-contenedor {
+    background: #2a2a2a;
+}
+
+body.oscuro .grid-item {
+    background: var(--link-oscuro);
+    color: #000;
+    box-shadow: 0 4px 12px rgba(187, 134, 252, 0.3);
+}
+
+body.oscuro .grid-item:hover {
+    background: var(--color-rojo-muy-oscuro);
+    color: white;
+    transform: translateY(-3px) scale(1.04);
+}
+
+/* Textos y títulos dentro de sections */
+body.oscuro section h1,
+body.oscuro section h2,
+body.oscuro section h3,
+body.oscuro section h4,
+body.oscuro section p {
+    color: var(--texto-oscuro);
+}
+
+/* Links */
+body.oscuro a {
+    color: var(--link-oscuro);
+}
+
+/* Botones */
+body.oscuro button,
+body.oscuro .btn-regresar,
+body.oscuro header .boton-tema {
+    background: var(--link-oscuro);
+    color: #000;
+}
+
+/* Menú navegación */
+body.oscuro nav ul li a {
+    color: var(--texto-oscuro);
+}
+
+body.oscuro nav ul li a:hover {
+    background: #bb86fc;
+}
+
+/* ===== QUOTE Y ASIDE EN MODO OSCURO ===== */
+body.oscuro blockquote {
+    background: #2a2a2a;
+    border-left: 5px solid var(--link-oscuro);
+    color: var(--texto-oscuro);
+}
+
+body.oscuro aside.contenedor {
+    background: #333;
+    border-left: 6px solid var(--link-oscuro);
+    color: var(--texto-oscuro);
+}
+
+body.oscuro aside.contenedor h3 {
+    color: var(--texto-oscuro);
+}
+
+body.oscuro nav {
+    background: #1a1a1a;
+}
+
+body.oscuro nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+body.oscuro nav ul li {
+    margin: 5px 10px;
+}
+
+body.oscuro nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+body.oscuro nav ul li a:hover {
+    background: #bb86fc;
+    transform: translateY(-1px);
+}
+
+body.oscuro.grid-item:hover {
+    background:  #bb86fc;
+    transform: translateY(-3px) scale(1.04);
+}
+
+body.oscuro.grid-item {
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+    background: #bb86fc;
+    color: white;
+    padding: 30px 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== MODO OSCURO - TABLA ===== */
+body.oscuro #tablaMarcas {
+    background: var(--fondo-seccion-oscuro);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+body.oscuro #tablaMarcas th {
+    background:  #bb86fc;
+    color: var(--texto-oscuro);
+}
+
+body.oscuro #tablaMarcas td {
+    color: var(--texto-oscuro);
+    background: #2a2a2a;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+body.oscuro #tablaMarcas tr:nth-child(even) {
+    background: #1f1f1f;
+}
+
+body.oscuro #tablaMarcas tr:hover {
+    background: var(--link-oscuro);
+    color: #000;
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+/* ===== MODO OSCURO - MULTIMEDIA ===== */
+body.oscuro .multimedia-item {
+    background: var(--fondo-seccion-oscuro);
+    border: 1px solid #3a3a3a;
+    color: var(--texto-oscuro);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.oscuro .multimedia-item:hover {
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+body.oscuro .multimedia-item h3 {
+    color: var(--texto-oscuro);
+}
+
+body.oscuro .multimedia-item p {
+    color: var(--texto-oscuro);
+}
+
+body.oscuro form {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #353436;;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.oscuro fieldset {
+    border: 2px solid  #bb86fc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+/* Ajuste de legend con fuente más elegante */
+body.oscuro legend {
+    font-weight: 700;
+    color: #bb86fc;
+}
+
+body.oscuro .volver-arriba {
+    background: var(--link-oscuro);
+    color: #000;
+    box-shadow: 0 4px 12px rgba(187,134,252,0.4);
+}
+
+body.oscuro.volver-arriba:hover {
+    background: var(--color-rojo-muy-oscuro);
+    transform: scale(1.1) translateY(-3px);
+}
+body.oscuro footer {
+    background:  #bb86fc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Ajuste de tipografía del footer */
+body.oscuro footer address {
+    margin: 0 0 10px;
+    font-style: normal;
+    font-size: 14px;
+}
+
+body.oscuro .scroll-top {
+    background: #333;
+}
+
+
+
+
+/* ===== MENU DE NAVEGACION ===== */
+nav {
+    background: var(--color-rojo-oscuro);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+nav ul li a:hover {
+    background: var(--color-rojo-muy-oscuro);
+    transform: translateY(-1px);
+}
+
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    width: 85%;
+    margin: auto;
+}
+
+/* ===== SECCIONES ===== */
+section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== TITULOS ELEGANTES ===== */
+h1, h2, h3, h4, header h1, nav ul li a, legend, button, .btn-regresar, #tablaMarcas th {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ajustes de tamaño y peso */
+h1 {
+    font-size: 34px;
+    margin: 20px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 20px 0 15px;
+    text-align: center;
+    color: var(--color-rojo);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #333;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+/* ===== TEXTOS PRINCIPALES ===== */
+.centrado-justificado, p, li, dd, dt, label {
+    font-family: 'Courier New', monospace;
+}
+
+/* Ajuste general de párrafos */
+p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ===== IMAGENES ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Ajuste para imágenes en secciones */
+section img {
+    margin: 15px 0;
+}
+
+/* ===== LISTAS ===== */
+ul, ol, dl {
+    margin-left: 28px;
+}
+
+li {
+    margin: 6px 0;
+}
+
+/* ===== BLOQUES DE TEXTO ESPECIALES ===== */
+blockquote {
+    font-family: 'Courier New', monospace;
+    background: #f7f7f7;
+    border-left: 5px solid var(--color-rojo-oscuro);
+    padding: 15px 18px;
+    margin: 25px 0;
+    font-size: 15px;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+}
+
+/* ===== ASIDE ===== */
+aside.contenedor {
+    background: #f9f5f5;
+    border-left: 6px solid var(--color-rojo-oscuro);
+    padding: 18px 20px;
+    margin-top: 18px;
+    border-radius: 10px;
+}
+
+/* ===== GRID DE PILARES ===== */
+#pilares-grid h2 {
+    font-size: 32px;
+    letter-spacing: 0.4px;
+}
+
+/* Estilos de botones dentro del grid */
+.grid-item {
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+    background: var(--color-rojo-oscuro);
+    color: white;
+    padding: 30px 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Aumento de suavidad en hover */
+.grid-item:hover {
+    background: var(--color-rojo-muy-oscuro);
+    transform: translateY(-3px) scale(1.04);
+}
+
+/* ===== FORMULARIO ===== */
+form {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 32px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste de bordes más suaves */
+fieldset {
+    border: 2px solid var(--color-rojo-oscuro);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+/* Ajuste de legend con fuente más elegante */
+legend {
+    font-weight: 700;
+    color: var(--color-rojo-oscuro);
+}
+
+/* Ajuste de inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 8px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.25s;
+    font-family: 'Courier New', monospace;
+}
+
+/* Ajuste de texto en inputs para mejor legibilidad */
+input:focus, select:focus, textarea:focus {
+    border-color: var(--color-rojo-oscuro);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 27, 27, 0.15);
+}
+
+/* Ajuste de botones de formulario */
+button {
+    display: inline-block;
+    margin: 10px 6px 0;
+    background: var(--color-rojo-oscuro);
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+/* Ajuste de hover en botones */
+button:hover {
+    background: var(--color-rojo-muy-oscuro);
+    transform: translateY(-2px);
+}
+
+/* ===== TABLA ===== */
+#tablaMarcas {
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste de cabeceras */
+#tablaMarcas th {
+    background: var(--color-rojo);
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Ajuste de celdas */
+#tablaMarcas td {
+    padding: 16px;
+    text-align: center;
+}
+
+/* Ajuste de filas pares */
+#tablaMarcas tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Ajuste de hover */
+#tablaMarcas tr:hover {
+    background: #f2e6e6;
+    transition: 0.2s;
+}
+
+/* ===== MULTIMEDIA ===== */
+.multimedia-item {
+    font-family: "Segoe UI", "Open Sans", sans-serif;
+    background: #fff9f9;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #f0d0d0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: 0.4s;
+}
+
+/* Ajuste de hover en multimedia */
+.multimedia-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Ajuste de tipografía de títulos en multimedia */
+.multimedia-item h3 {
+    font-size: 20px;
+    margin-top: 0;
+    color: var(--color-rojo);
+    text-align: center;
+}
+
+/* Ajuste de párrafos */
+.multimedia-item p {
+    font-size: 14px;
+    margin-top: 12px;
+    color: #444;
+}
+
+/* Ajuste de video y audio */
+video, audio {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* ===== BOTÓN DE REGRESO ===== */
+.btn-regresar {
+    display: block;
+    width: 270px;
+    margin: 38px auto;
+    padding: 12px 22px;
+    background: var(--color-rojo-oscuro);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+/* Ajuste de hover en botón de regreso */
+.btn-regresar:hover {
+    background: var(--color-rojo-muy-oscuro);
+    transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--color-rojo);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Ajuste de tipografía del footer */
+footer address {
+    margin: 0 0 10px;
+    font-style: normal;
+    font-size: 14px;
+}
+
+/* Ajuste de separador */
+hr {
+    margin: 35px auto;
+    width: 85%;
+    border: 1px solid #ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    main {
+        width: 95%;
+    }
+
+    .grid-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    /* Ajuste de texto en móviles */
+    h1 { font-size: 30px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 16px; }
+    p, li { font-size: 14px; }
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--color-rojo-oscuro);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;  /* ← Letra pequeña */
+    font-weight: normal;  /* ← Sin negrita */
+    text-decoration: none;
+    border-radius: 8px;  /* ← Bordes suaves, no círculo */
+    z-index: 1000;
+}
+
+.scroll-top.mostrar {
+    opacity: 0.8;
+}
+
+.scroll-top:hover {
+    opacity: 1;
+    background: var(--color-rojo);
+}
+
+/* Lista dinamica*/
+/* FUNCIONALIDADES */
+/* BOTÓN ME GUSTA - FIJO DERECHA */
+.like-btn {
+    position: fixed;
+    bottom: 20px;   
+    left: 5px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+
+body.oscuro .like-btn {
+    background: #6bd9f5;
+    box-shadow: 0 4px 12px #6bd9f5;
+}
+
+/* LISTA DINÁMICA MARCAS */
+#listaMarcas {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-left: 4px solid #6bd9f5;;
+}
+
+body.oscuro #listaMarcas {
+    background: #2a2a2a;
+    color: var(--texto-oscuro);
+    border-left-color: var(--link-oscuro);
+}
+
+/* ===== GALERÍA DE PRODUCTOS COCA-COLA ===== */
+.galeria-productos {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.galeria-productos #imgProductoPrincipal {
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-productos #imgProductoPrincipal:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(82,5,5,0.4);
+}
+
+/* MINIATURAS */
+.galeria-productos img[width="70"] {
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.galeria-productos img[width="70"]:hover {
+    border-color: var(--color-rojo);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(82,5,5,0.3);
+}
+
+/* MODO OSCURO */
+body.oscuro .galeria-productos #imgProductoPrincipal {
+    box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+}
+
+body.oscuro .galeria-productos #imgProductoPrincipal:hover {
+    box-shadow: 0 20px 40px rgba(187,134,252,0.4);
+}
+
+body.oscuro .galeria-productos img[width="70"]:hover {
+    border-color: var(--link-oscuro);
+    box-shadow: 0 5px 15px rgba(187,134,252,0.5);
+}
+
+/* RESPONSIVE MÓVIL */
+@media (max-width: 800px) {
+    .galeria-productos #imgProductoPrincipal {
+        max-width: 300px;
+    }
+    .galeria-productos img[width="70"] {
+        width: 60px;
+    }
+}
+
+#btnModo {
+    position: fixed;
+    top: 15px;       
+    right: 15px;  
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ENLACES EXTERNOS */
+a[href^="http"]:not([href*="localhost"]):not([href^="#"]):hover {
+    border-bottom: 2px solid var(--color-rojo);
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+body.oscuro a[href^="http"]:not([href*="localhost"]):not([href^="#"]):hover {
+    border-bottom-color: var(--link-oscuro);
+}
+
+.carrusel-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.carrusel {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+}
+
+.carrusel img {
+    width: 100%;
+}
+
+.btn {
+    position: absolute;
+    top: 45%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

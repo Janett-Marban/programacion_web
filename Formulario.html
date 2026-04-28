@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo de Mi Sitio Web">
+        <h1>Formulario</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Tabla.html">Tabla</a></li>
+            <li><a href="Formulario.html">Formulario</a></li>
+            <li><a href="Multimedia.html">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <p>Seleccionados: <span id="contador">0</span></p>
+            <h2>Estudio sobre Obesidad y Bebidas Azucaradas</h2>
+            <p class="centrado-justificado">El impacto de Coca-Cola y bebidas similares genera obesidad, diabetes y contaminación plástica.</p>
+
+            <form action="#" method="post" onsubmit="return validarFormulario(event)">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Consumo Semanal de Bebidas (causa obesidad/diabetes)</legend>
+
+                    <p>Frecuencia consumo Coca-Cola:</p>
+                    <label for="diario"><input type="radio" id="diario" name="consumo" value="diario"> Diario</label><br>
+                    <label for="semanal"><input type="radio" id="semanal" name="consumo" value="semanal"> 2-3 veces por semana</label><br>
+                    <label for="ocasional"><input type="radio" id="ocasional" name="consumo" value="ocasional"> Ocasional</label><br>
+                    <label for="nunca"><input type="radio" id="nunca" name="consumo" value="nunca"> Nunca</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Impacto en Salud (obesidad, diabetes)</legend>
+
+                    <p>Problemas relacionados con bebidas azucaradas:</p>
+                    <label><input type="checkbox" name="problemas[]" value="obesidad"> Obesidad</label><br>
+                    <label><input type="checkbox" name="problemas[]" value="diabetes"> Diabetes tipo 2</label><br>
+                    <label><input type="checkbox" name="problemas[]" value="caries"> Caries dentales</label><br>
+                    <label><input type="checkbox" name="problemas[]" value="adiccion"> Adicción al azúcar</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Fotos de Impacto (contaminación plástica)</legend>
+
+                    <label for="fotos">Subir fotos de botellas plásticas:</label>
+                    <input type="file" id="fotos" name="fotos" accept="image/*" capture="environment" multiple>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Opinión sobre Impacto Ambiental</legend>
+
+                    <label for="comentarios">Describe el impacto del uso de agua y plásticos:</label>
+                    <textarea id="comentarios" name="comentarios" rows="5" cols="50" placeholder="Ej: Coca-Cola consume mucha agua en comunidades pobres..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Zona Geográfica</legend>
+
+                    <label for="region">Región más afectada por contaminación:</label>
+                    <select id="region" name="region">
+                        <option value="">Seleccionar...</option>
+                        <option value="mexico">México (altos índices obesidad)</option>
+                        <option value="latinoamerica">Latinoamérica</option>
+                        <option value="asia">Asia</option>
+                        <option value="africa">África (escasez agua)</option>
+                        <option value="global">Global</option>
+                    </select>
+                </fieldset>
+
+                <label for="terminos"> 
+                    Acepto los términos y condiciones<input type="checkbox" id="terminos" name="terminos" required>
+                   
+                </label>
+
+                <button type="submit">Enviar Estudio</button>
+                <button type="reset">Limpiar Formulario</button>
+            </form>
+
+            <a href="index.html" class="btn-regresar">
+                Regresar a la página principal
+            </a>
+        </section>
+    </main>
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio Web</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo de Mi Sitio Web">
+        <h1>Mi sitio Web</h1>
+       
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#Introducción">Introducción</a></li>
+            <li><a href="#Historia">Historia</a></li>
+            <li><a href="#Impacto">Impacto</a></li>
+            <li><a href="#Productos">Productos</a></li>
+            <li><a href="#dato-curioso">Dato Curioso</a></li>
+            <li><a href="EJEMPLOAPI/public/index.html">Gestor de productos</a></li>
+            <li><a href="Tabla.html">Tabla</a></li>
+            <li><a href="Formulario.html">Formulario</a></li>
+            <li><a href="Multimedia.html">Multimedia</a></li>
+            <li><a href="#Referencias">Referencias</a></li>
+        </ul>
+    </nav> 
+    <button id="btnModo" onclick="cambiarModo()">🌙</button>
+    <button id="likeBtn" class="like-btn" onclick="likePost()">❤️ (<span id="contadorLikes">0</span>)</button>
+    <script src="script.js" defer></script>
+    <main>
+
+        <section id="Introducción">
+            <h2>Introducción</h2>
+            <p class="centrado-justificado">
+                The Coca-Cola Company es una corporación multinacional estadounidense de bebidas
+                con sede en Atlanta, Georgia. Tiene intereses en la fabricación, venta minorista
+                y comercialización de concentrados y jarabes para bebidas no alcohólicas.
+            </p>
+
+            <img src="source.gif" alt="Coca-Cola">
+        </section>
+
+        <section id="Historia">
+            <h2>Historia</h2>
+
+            <article>
+                <h3>El origen de Coca‑Cola en los EE. UU.</h3>
+                <img src="u.webp" alt="Historia de Coca-Cola">
+                <p class="centrado-justificado">
+                    El 8 de mayo de 1886, el Dr. John Pemberton vendió el primer vaso de Coca‑Cola en la farmacia Jacobs en el centro de Atlanta.<br> 
+                    Sirviendo nueve vasos al día en su primer año, Coca‑Cola fue un nuevo refresco en sus comienzos. Mira aquí la historia de cómo empezó todo.
+                </p>
+            </article>
+
+            <article>
+                <h3>Una valiosa historia: refrescar el mundo y marcar la diferencia</h3>
+                <img src="i.webp" alt="Historia de Coca-Cola">
+                <p class="centrado-justificado">
+                    Por más de 135 años, The Coca‑Cola Company ha sido parte de la vida de las personas en días festivos,<br> 
+                    eventos especiales y cotidianos. Desde nuestras marcas y publicidad icónicas hasta nuestras iniciativas de sostenibilidad en todo el mundo,<br> 
+                    The Coca‑Cola Company tiene como objetivo refrescar el mundo mientras hace una diferencia.
+                </p>
+            </article>
+
+            <article>
+                <h3>Historial de sostenibilidad de Coca‑Cola</h3>
+                <img src="h.webp" alt="Sostenibilidad de Coca-Cola">
+                <p class="centrado-justificado">
+                    Desde 1917, nuestros esfuerzos han abarcado la sostenibilidad del agua, la emancipación de la mujer, el bienestar de la comunidad,<br>
+                    los envases sostenibles, la protección del clima, los derechos humanos y laborales, y la agricultura sostenible.<br>
+                </p>
+            </article>
+
+            <article>
+                <h3>La primera botella de Coca‑Cola</h3>
+                <img src="c.webp" alt="Primera botella de Coca-Cola">
+                <p class="centrado-justificado">
+                    La botella contorneada ha sido célebre en el arte, la música y la publicidad.<br> 
+                    Lee la historia de la iniciativa que comenzó en 1915 y se convirtió en una de las formas más famosas del mundo. 
+                </p>
+            </article>
+
+            <article>
+                <h3>Santa Claus y Coca‑Cola</h3>
+                <img src="s.webp" alt="Santa Claus y Coca-Cola">
+                <p class="centrado-justificado">
+                    Con la intención de crear una campaña publicitaria que vinculara a Coca‑Cola con la Navidad, el artista Haddon Sundblom creó su primera ilustración que mostraba a Santa Claus dándose un momento para disfrutar de una Coca‑Cola.<br> 
+                    Durante las siguientes tres décadas, de 1931 a 1964, Sundblom pintó imágenes de Santa que ayudaron a crear la interpretación moderna de St. Nick.
+                </p>
+            </article>
+
+            <blockquote>
+                "El éxito de Coca-Cola radica en su capacidad de adaptarse a los cambios del mercado."
+                <cite>- John Pemberton</cite>
+            </blockquote>
+
+            <aside class="contenedor">
+                <h3>Como parte de su identidad histórica, la empresa sostiene que <q>Coca-Cola no solo vende bebidas, vende experiencias</q>.</h3>
+            </aside>
+        </section>
+
+        <section id="Productos">
+                <h2>Productos Coca-Cola</h2>
+                
+                <!-- GALERÍA DE PRODUCTOS -->
+                <div class="galeria-productos" style="text-align:center;margin:40px 0;">
+                    <!-- IMAGEN PRINCIPAL -->
+                    <img id="imgProductoPrincipal" src="coca.webp" alt="Producto principal" >
+                    
+                    <!-- MINIATURAS PRODUCTOS -->
+                    <h4 style="margin:20px 0 10px;">Haz clic en un producto:</h4>
+                    <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px;">
+                        <img src="coca.webp" onclick="cambiarProducto('coca.webp')" width="70" >
+                        <img src="fuze tea.jpg" onclick="cambiarProducto('fuze tea.jpg')" width="70">
+                        <img src="ciel.jpg" onclick="cambiarProducto('ciel.jpg')" width="70" >
+                        <img src="sprice.jpg" onclick="cambiarProducto('sprice.jpg')" width="70" >
+                    </div>
+                </div>
+            
+                <!-- LISTA DE PRODUCTOS (mantén tu lista original) -->
+                <h4>Coca-Cola ofrece una amplia gama de productos, entre ellos:</h4>
+                <li>Refrescos: Coca-Cola, Coca-Cola Sin Azúcar, Coca-Cola Light, Fanta, Sprite, Fresca</li>
+                <li>Aguas: Ciel, Dasani, Smartwater</li>
+                <li>Bebidas energéticas: Powerade, Powerade Zero</li>
+                <li>Jugos: Minute Maid, Del Valle</li>
+                <li>Bebidas calientes: Café Costa</li>
+                <li>Tés: Fuze Tea, Honest Tea</li>
+                <li>Otras bebidas: Topo Chico, Schweppes</li>
+                
+                <a href="Tabla.html">Ver todas las marcas →</a>
+        <section id="pilares-grid">
+            <h2>Pilares de la Empresa</h2>
+            <div class="grid-contenedor">
+                <div class="grid-item">Innovación</div>
+                <div class="grid-item">Calidad</div>
+                <div class="grid-item">Sostenibilidad</div>
+                <div class="grid-item">Tradición</div>
+                <div class="grid-item">Compromiso</div>
+                <div class="grid-item">Visión global</div>
+            </div>
+        </section>
+
+        <section id="Impacto">
+            <h2>Impacto</h2>
+            <p class="centrado-justificado">
+                El impacto de Coca-Cola es profundo y ambivalente: genera un alto valor económico y empleo a nivel mundial,<br> 
+                pero está fuertemente vinculado a problemas graves de salud: obesidad, diabetes, adicción y a una alta contaminación plástica.<br> 
+                Además, su operación impacta el uso de agua en comunidades. 
+            </p>
+            <ul>
+                <li><a href="Formulario.html" target="_blank" rel="noopener noreferrer">Por favor completa este formulario. Cada respuesta cuenta para documentar el impacto real de las bebidas azucaradas (Coca-Cola)</a></li> 
+            </ul>
+        </section>
+
+        <section id="dato-curioso">
+            <h2>Dato Curioso</h2>
+            <ul>
+                <li><a href="Multimedia.html" target="_blank" rel="noopener noreferrer">Si eres curiosa, ve el siguiente enlace</a></li>
+            </ul>
+        </section>
+
+        <section id="Referencias">
+            <h2>Referencias</h2>
+            <p class="centrado-justificado">
+                Para obtener más información sobre Coca-Cola, puedes visitar los siguientes sitios web:
+            </p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=SMzMz3BHANs" target="_blank" rel="noopener noreferrer">Sitio de la Historia de Coca-Cola</a></li>
+                <li><a href="https://www.coca-cola.com/" target="_blank" rel="noopener noreferrer">Sitio oficial de Coca-Cola</a></li>
+                <li><a href="https://accounts.google.com/v3/signin/identifier?checkedDomains=youtube&dsh=S-1476023768%3A1775071659505854&flowEntry=AccountChooser&flowName=GlifWebSignIn&hl=es&ifkv=AT1y2_UHNFfynYR6woktp4R0RW7iiyreuT-OyNS7cYBkfKcePCcpdKMCsom4e3F7CNyBYT-s-arOsg&pstMsg=1">Enviar correo</a></li>
+                <li><a href="tel:+123456789">Llamar</a></li>
+                <li><a href="Catalogo Coca Cola.pdf" download>Descargar Catálogo</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <address>
+            Contacto: he488890@uaeh.edu.mx<br>
+            Teléfono: +52 7713923289<br>
+            Creadora: Janett Hernández<br>
+        </address>
+        <p>&copy; 2026 Mi sitio Web</p>
+    </footer>
+    <a href="#" class="scroll-top" title="↑">↑</a>
+</body>
+</html>

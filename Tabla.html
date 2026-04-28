@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de marcas</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo de Mi Sitio Web">
+        <h1>Nuestras Marcas</h1>
+        <p>Seleccione una opción para aplicar el orden de clasificación</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Tabla.html">Tabla</a></li>
+            <li><a href="Formulario.html">Formulario</a></li>
+            <li><a href="Multimedia.html">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Marcas y categorías</h2>
+            <h3>Agregar nueva marca</h3>
+
+            <input type="text" id="nuevaMarca" placeholder="Nueva marca">
+            <button onclick="agregarMarca()">Agregar</button>
+
+            <ul id="listaMarcas"></ul>
+            <div class="marcas">
+                <table id="tablaMarcas">
+                    <caption>Clasificación de marcas de Coca-Cola</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="carbonatadas">
+                            <td data-label="Marca">Coca-Cola</td>
+                            <td data-label="Categoría">Carbonatadas</td>
+                        </tr>
+                        <tr class="carbonatadas">
+                            <td data-label="Marca">Sprite</td>
+                            <td data-label="Categoría">Carbonatadas</td>
+                        </tr>
+                        <tr class="carbonatadas">
+                            <td data-label="Marca">Fanta</td>
+                            <td data-label="Categoría">Carbonatadas</td>
+                        </tr>
+                        <tr class="agua">
+                            <td data-label="Marca">Agua Ciel</td>
+                            <td data-label="Categoría">Agua Mineral</td>
+                        </tr>
+                        <tr class="te">
+                            <td data-label="Marca">Fuze Tea</td>
+                            <td data-label="Categoría">Té</td>
+                        </tr>
+                        <tr class="alcohol">
+                            <td data-label="Marca">Bacardi</td>
+                            <td data-label="Categoría">Bebidas Alcohólicas</td>
+                        </tr>
+                        <tr class="hidratacion">
+                            <td data-label="Marca">Powerade</td>
+                            <td data-label="Categoría">Hidratación</td>
+                        </tr>
+                        <tr class="nutricion">
+                            <td data-label="Marca">Del Valle</td>
+                            <td data-label="Categoría">Nutrición</td>
+                        </tr>
+                        <tr class="lacteos">
+                            <td data-label="Marca">Santa Clara</td>
+                            <td data-label="Categoría">Productos Lácteos</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="carrusel-container">
+                    <h2>Carrusel</h2>
+                    
+                    <div class="carrusel">
+                        <img id="carruselImg" src="cocasinazucar.jpg" alt="Imagen carrusel">
+                        
+                        <button class="btn prev" onclick="prevImg()">◀</button>
+                        <button class="btn next" onclick="nextImg()">▶</button>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn-regresar">
+                Regresar a la página principal
+            </a>
+        </section>
+    </main>
+<script src="script.js" defer></script>
+</body>
+</html>
