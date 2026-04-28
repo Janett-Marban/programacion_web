@@ -315,3 +315,16 @@ body.oscuro td {
     color: #f0f0f0;
     border-color: #444;
 }
+
+body.oscuro {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.oscuro .subtitulo {
+    color: #ff9999;
+}
+
+body.oscuro tr:hover {
+    background: #2a2a2a;
+}
