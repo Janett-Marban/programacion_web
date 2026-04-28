@@ -294,3 +294,24 @@ footer {
 .btn-regresar:hover{
     background:#520505;
 }
+
+body.oscuro .card,
+body.oscuro .formulario-card,
+body.oscuro .tabla-card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.oscuro input,
+body.oscuro textarea {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border-color: #555;
+}
+
+body.oscuro th,
+body.oscuro td {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-color: #444;
+}
