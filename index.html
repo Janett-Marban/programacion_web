@@ -9,25 +9,31 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="Logo de Mi Sitio Web">
-        <h1>Mi sitio Web</h1>
-       
-    </header>
+    <img src="logo.png" alt="Logo de Mi Sitio Web">
+    <h1>Mi sitio Web</h1>
+</header>
 
-    <nav>
-        <ul>
-            <li><a href="#Introducción">Introducción</a></li>
-            <li><a href="#Historia">Historia</a></li>
-            <li><a href="#Impacto">Impacto</a></li>
-            <li><a href="#Productos">Productos</a></li>
-            <li><a href="#dato-curioso">Dato Curioso</a></li>
-            <li><a href="mongo.html">Gestor de productos</a></li>
-            <li><a href="Tabla.html">Tabla</a></li>
-            <li><a href="Formulario.html">Formulario</a></li>
-            <li><a href="Multimedia.html">Multimedia</a></li>
-            <li><a href="#Referencias">Referencias</a></li>
-        </ul>
-    </nav> 
+<nav>
+    <ul>
+        <!-- Pestaña Inicio con submenú -->
+        <li class="dropdown">
+            <a href="#">Inicio ▾</a>
+            <ul class="submenu">
+                <li><a href="#Introducción">Introducción</a></li>
+                <li><a href="#Historia">Historia</a></li>
+                <li><a href="#Impacto">Impacto</a></li>
+                <li><a href="#Productos">Productos</a></li>
+                <li><a href="#dato-curioso">Dato Curioso</a></li>
+                <li><a href="#Referencias">Referencias</a></li>
+            </ul>
+        </li>
+        <!-- Links externos -->
+        <li><a href="mongo.html">Gestor de productos</a></li>
+        <li><a href="Tabla.html">Tabla</a></li>
+        <li><a href="Formulario.html">Formulario</a></li>
+        <li><a href="Multimedia.html">Multimedia</a></li>
+    </ul>
+</nav>
     <button id="btnModo" onclick="cambiarModo()">🌙</button>
     <button id="likeBtn" class="like-btn" onclick="likePost()">❤️ (<span id="contadorLikes">0</span>)</button>
     <script src="script.js" defer></script>

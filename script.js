@@ -132,12 +132,31 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contadorLikes') && (document.getElementById('contadorLikes').textContent = likes);
 });
 
-// 8. CARRUSEL
+// 8. CARRUSEL CON AUTO-PLAY
 let carruselIndex = 0;
-const carruselImgs = ['coca.webp', 'fanta.jpg', 'fuze tea.jpg', 'sprice.jpg', 'santaclara.webp','topochico.webp' , 'POWERADE.webp', 'alcolica.webp', 'delvalle.webp'   ];
-function nextImg() { carruselIndex = (carruselIndex + 1) % carruselImgs.length; document.getElementById('carruselImg').src = carruselImgs[carruselIndex]; }
-function prevImg() { carruselIndex = (carruselIndex - 1 + carruselImgs.length) % carruselImgs.length; document.getElementById('carruselImg').src = carruselImgs[carruselIndex]; }
+const carruselImgs = ['coca.webp', 'fanta.jpg', 'fuze tea.jpg', 'sprice.jpg', 'santaclara.webp', 'topochico.webp', 'POWERADE.webp', 'alcolica.webp', 'delvalle.webp'];
 
+function actualizarCarrusel() {
+    const img = document.getElementById('carruselImg');
+    img.style.opacity = '0';
+    setTimeout(() => {
+        img.src = carruselImgs[carruselIndex];
+        img.style.opacity = '1';
+    }, 200);
+}
+
+function nextImg() {
+    carruselIndex = (carruselIndex + 1) % carruselImgs.length;
+    actualizarCarrusel();
+}
+
+function prevImg() {
+    carruselIndex = (carruselIndex - 1 + carruselImgs.length) % carruselImgs.length;
+    actualizarCarrusel();
+}
+
+// Cambia solo automáticamente cada 3 segundos
+setInterval(nextImg, 3000);
 
 
 

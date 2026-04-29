@@ -328,3 +328,36 @@ body.oscuro .subtitulo {
 body.oscuro tr:hover {
     background: #2a2a2a;
 }
+
+/* ===== MENU DE NAVEGACION ===== */
+nav {
+    background: var(--color-rojo-oscuro);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+nav ul li a:hover {
+    background: var(--color-rojo-muy-oscuro);
+    transform: translateY(-1px);
+}
